@@ -5,6 +5,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import NavLink from './NavLink';
+import colors from '../../util/colors';
 
 const NavBar = () => {
   return (
@@ -12,21 +14,18 @@ const NavBar = () => {
       <div>
         <Link to={'/'} style={styles.brand}>
           <h1>
-            Alejandra Reynoso
+            AR
           </h1>
         </Link>
       </div>
 
       <div style={styles.links}>
-        <Link to={'/'} style={styles.link}>
-          <p>Home</p>
-        </Link>
 
-        <Link to={'/resume'} style={styles.link}>
-          <p>Resume & Headshots</p>
-        </Link>
+        <NavLink to={'/'} text={'Home'} />
+        <NavLink to={'/about'} text={'About Me'} />
+        <NavLink to={'/resume'} text={'Resume & Headshots'} />
+        
       </div>
-
     </div>
   )
 }
@@ -35,7 +34,7 @@ const NavBar = () => {
 const styles = {
   container: {
     width: 'inherit',
-    height: 60,
+    height: 80,
 
     paddingLeft: 60,
     paddingRight: 60,
