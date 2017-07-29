@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 
 const Example = () => {
   return (
-    <div></div>
+    <div style={styles.container}>
+
+    </div>
   )
 }
 
@@ -37,7 +39,9 @@ class Example extends Component {
 
   render() {
     return (
-      <div></div>
+      <div style={styles.container}>
+
+      </div>
     )
   }
 }

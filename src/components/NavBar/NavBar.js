@@ -22,9 +22,9 @@ const NavBar = () => {
       <div style={styles.links}>
 
         <NavLink to={'/'} text={'Home'} />
-        <NavLink to={'/about'} text={'About Me'} />
+        <NavLink to={'/about'} text={'About'} />
         <NavLink to={'/resume'} text={'Resume & Headshots'} />
-        
+
       </div>
     </div>
   )
