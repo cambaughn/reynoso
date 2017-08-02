@@ -12,6 +12,7 @@ import {
 
 import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
+import Contact from './Contact/Contact';
 import Home from './Home';
 import About from './About';
 
@@ -22,10 +23,11 @@ class App extends Component {
       <Router>
         <div style={styles.container}>
           <NavBar />
-          
+
           <Switch>
             <Route exact path={'/'} component={Home} />
-            <Route path={'/About'} component={About} />
+            <Route path={'/about'} component={About} />
+            <Route path={'/contact'} component={Contact} />
           </Switch>
 
           <Footer />

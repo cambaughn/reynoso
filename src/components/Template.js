@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Example = () => {
+const Template = () => {
   return (
     <div style={styles.container}>
 
@@ -16,12 +16,14 @@ const Example = () => {
 
 
 const styles = {
+  // CONTAINER ---------------------
+
   container: {
 
   },
 }
 
-export default Example;
+export default Template;
 
 // ---------- OR ----------
 
@@ -32,7 +34,7 @@ export default Example;
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Example extends Component {
+class Template extends Component {
   constructor(props) {
     super(props);
   }
@@ -47,9 +49,11 @@ class Example extends Component {
 }
 
 const styles = {
+  // CONTAINER ---------------------
+
   container: {
 
   },
 }
 
-export default Example;
+export default Template;

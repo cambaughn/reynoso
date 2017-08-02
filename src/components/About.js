@@ -20,9 +20,9 @@ const About = () => {
         <p style={styles.text}>
           Alejandra started her acting career in commercials--working both the English-speaking and Spanish-speaking markets--as well as doing student films and local theater. Eventually she transitioned into Voice Over, where she discovered a love for building and inhabiting animated characters.
         </p>
-
+        
         <p style={styles.text}>
-          In high school Alejandra landed the roles of Elena Schnurr on The Hub’s <a href='http://www.imdb.com/title/tt1705038/' target="_blank" style={styles.inlineLink}>G.I. Joe Renegades,</a> and the sweet, well-meaning Fairy of Nature, Flora, on Nickelodeon’s <a href='http://www.imdb.com/title/tt0421482/' target="_blank" style={styles.inlineLink}>Winx Club.</a> She was fortunate to work on 5 seasons as a series regular, and on two movies for the fairy franchise.
+          In high school Alejandra landed the roles of Elena Schnurr on The Hub’s <a href='http://www.imdb.com/title/tt1705038/' target='_blank' rel='noopener noreferrer' style={styles.inlineLink}>G.I. Joe Renegades,</a> and the sweet, well-meaning Fairy of Nature, Flora, on Nickelodeon’s <a href='http://www.imdb.com/title/tt0421482/' target='_blank' rel='noopener noreferrer' style={styles.inlineLink}>Winx Club.</a> She was fortunate to work on 5 seasons as a series regular, and on two movies for the fairy franchise.
         </p>
 
         <p style={styles.text}>
@@ -34,7 +34,7 @@ const About = () => {
         </p>
 
         <p style={styles.text}>
-          Currently you can hear Alejandra on Netflix’s hit video game adaptation <a href='http://www.imdb.com/title/tt6517102/' target="_blank" style={styles.inlineLink}>Castlevania,</a> where she voices the sassy sorceress Sypha Belnades alongside Richard Armitage (The Hobbit, Berlin Station), Graham McTavish (Preacher, Outlander), James Callis (Battlestar Galactica), and Tony Amendola (Stargate SG1, Once Upon A Time)!
+          Currently you can hear Alejandra on Netflix’s hit video game adaptation <a href='http://www.imdb.com/title/tt6517102/' target='_blank' rel='noopener noreferrer' style={styles.inlineLink}>Castlevania,</a> where she voices the sassy sorceress Sypha Belnades alongside Richard Armitage (The Hobbit, Berlin Station), Graham McTavish (Preacher, Outlander), James Callis (Battlestar Galactica), and Tony Amendola (Stargate SG1, Once Upon A Time)!
         </p>
 
         <p style={styles.text}>
@@ -83,7 +83,7 @@ const styles = {
   inlineLink: {
     textDecoration: 'none',
     fontWeight: '900',
-    color: 'black'
+    color: 'black',
   }
 }
 

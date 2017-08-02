@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div>
-      
+    <div style={styles.container}>
+      <img src={require('../assets/photos/hero.jpg')} alt={'Alejandra portrait'} style={styles.hero}/>
     </div>
   )
 }
@@ -17,7 +17,17 @@ const Home = () => {
 
 const styles = {
   container: {
+    width: 'inherit',
 
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
+
+  hero: {
+    width: 500,
+    height: 'auto',
   },
 }
 
