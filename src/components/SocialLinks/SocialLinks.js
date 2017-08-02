@@ -9,7 +9,7 @@ class SocialLinks extends Component {
 
   render() {
     return (
-      <div style={{...styles.container, ...this.props.containerStyle}}>
+      <div style={{...styles.container, ...this.props.linkGroupStyle}}>
         <a href='https://www.instagram.com/alereyn0s0/' target='_blank' rel='noopener noreferrer' style={{...styles.link, ...this.props.linkStyle}}>
           <i className="fa fa-instagram" aria-hidden="true"></i>
         </a>
@@ -28,7 +28,7 @@ const styles = {
   // CONTAINER ---------------------
 
   container: {
-    width: 200,
+    width: 250,
 
     display: 'flex',
     flexDirection: 'row',

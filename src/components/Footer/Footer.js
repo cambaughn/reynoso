@@ -5,26 +5,43 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import SocialLinks from '../SocialLinks/SocialLinks';
 import colors from '../../util/colors';
 
 const Footer = () => {
   return (
     <div style={styles.container}>
-
+      <SocialLinks linkGroupStyle={styles.linkGroupStyle} linkStyle={styles.linkStyle} />
     </div>
   )
 }
 
 
 const styles = {
+  // CONTAINER ---------------------
+
   container: {
     backgroundColor: '#2B2B2B',
-    // borderTop: `1px solid ${colors.midGrey}`,
 
     width: 'inherit',
     height: 100,
 
     marginTop: 100,
+
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  // LINKS ---------------------
+
+  linkGroupStyle: {
+    width: 250,
+  },
+
+  linkStyle: {
+    color: 'white',
+    fontSize: 25,
   },
 }
 
