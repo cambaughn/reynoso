@@ -42,6 +42,8 @@ const styles = {
 
     color: 'black',
     textDecoration: 'none',
+
+    fontSize: 15,
   },
 
   hover: {

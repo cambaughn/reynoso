@@ -13,6 +13,7 @@ import {
 import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
 import Contact from './Contact/Contact';
+import Reels from './Reels/Reels';
 import Home from './Home';
 import About from './About';
 

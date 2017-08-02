@@ -23,6 +23,7 @@ const NavBar = () => {
 
         <NavLink to={'/'} text={'Home'} />
         <NavLink to={'/about'} text={'About'} />
+        <NavLink to={'/reels'} text={'Reels'} />
         <NavLink to={'/resume'} text={'Resume & Headshots'} />
         <NavLink to={'/contact'} text={'Contact'} />
 
