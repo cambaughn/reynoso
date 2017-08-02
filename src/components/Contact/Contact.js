@@ -5,23 +5,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 const Contact = () => {
   return (
     <div style={styles.container}>
 
       <h2 style={styles.linkHeader}>Follow Me</h2>
-      <div style={styles.linkGroup}>
-        <a href='https://www.instagram.com/alereyn0s0/' target='_blank' rel='noopener noreferrer' style={styles.link}>
-          <i className="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href='https://twitter.com/AleReyn0s0' target='_blank' rel='noopener noreferrer' style={styles.link}>
-          <i className="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href='https://www.facebook.com/AleReyn0s0/' target='_blank' rel='noopener noreferrer' style={styles.link}>
-          <i className="fa fa-facebook-official" aria-hidden="true"></i>
-        </a>
-      </div>
+      <SocialLinks />
 
     </div>
   )
