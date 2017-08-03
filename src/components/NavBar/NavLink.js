@@ -20,7 +20,7 @@ class NavLink extends Component {
     return (
       <Link
         to={this.props.to}
-        style={this.state.hover ? {...styles.link, ...styles.hover} : styles.link}
+        style={this.state.hover ? {...styles.link, ...styles.hover, ...this.props.style} : {...styles.link, ...this.props.style}}
         onMouseEnter={() => this.setState({ hover: true })}
         onMouseLeave={() => this.setState({ hover: false })}
       >
