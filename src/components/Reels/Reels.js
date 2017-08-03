@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
+import ShowCards from '../About/ShowCards';
+
 const Reels = () => {
   return (
     <div style={styles.container}>
@@ -26,6 +28,8 @@ const Reels = () => {
           }
         }}
       />
+
+      <ShowCards headerText={'Watch Alejandra'} />
     </div>
   )
 }
