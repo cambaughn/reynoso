@@ -12,11 +12,8 @@ const Contact = () => {
   return (
     <div style={styles.container}>
 
-      <h2 style={styles.linkHeader}>Follow Me</h2>
-      <SocialLinks />
-
-      <div>
-        <h2>Voice Over Agents</h2>
+      <div style={styles.voiceOverWrapper}>
+        <h2 style={styles.agentHeader}>Voice Over Agents</h2>
         <p style={styles.agentGroup}>
           Dean Panaro <br />
           James Murray <br />
@@ -40,8 +37,9 @@ const Contact = () => {
             abramsartists.com
           </a>
         </p>
-      </div>
+      </div> {/* voiceOverWrapper */}
 
+      <SocialLinks headerText={'Social'} />
 
     </div>
   )
@@ -59,13 +57,16 @@ const styles = {
     alignItems: 'center',
   },
 
-  // LINKS --------------------------
+  // AGENTS --------------------------
 
-  linkHeader: {
-    marginBottom: 10,
+  voiceOverWrapper: {
+    marginBottom: 20,
+    textAlign: 'center',
   },
 
-  // AGENTS --------------------------
+  agentHeader: {
+    marginBottom: 10,
+  },
 
   agentGroup: {
     marginBottom: 20,
