@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavLink from './NavBar/NavLink';
+import ShowCards from './About/ShowCards';
+import colors from '../util/colors';
 
 const Home = () => {
   return (
@@ -14,10 +16,16 @@ const Home = () => {
 
       <div style={styles.aboutWrapper}>
         <h1 style={styles.aboutHeader}>Welcome</h1>
-        <p style={styles.aboutText}>Alejandra is super awesome. Here are a few things about her.</p>
+        <p style={styles.aboutText}>
+          Alejandra is super awesome. Here are a few things about her.
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed dictum odio. Donec arcu risus, hendrerit accumsan sem id, facilisis vehicula velit. Maecenas non arcu tincidunt, euismod ex quis, congue augue. Aliquam erat volutpat. Quisque ut turpis felis. Duis et rutrum nisl, eget scelerisque tellus.
+        </p>
 
         <NavLink to={'/about'} text={'Read More'} style={styles.readMore} />
       </div>
+
+      <ShowCards headerText={'Watch Alejandra'} />
 
     </div>
   )
@@ -39,35 +47,49 @@ const styles = {
   // IMAGE -------------------------
 
   hero: {
-    width: 500,
-    height: 'auto',
+    height: 600,
+    width: 'auto',
 
   },
 
   // ABOUT -------------------------
 
   aboutWrapper: {
-    marginTop: 30,
+    marginTop: 0,
+    paddingTop: 80,
+    paddingBottom: 80,
+
+    width: '100%',
 
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
+
+    backgroundColor: colors.reallyLightGrey,
   },
 
   aboutHeader: {
-    fontSize: '2.5em',
-    marginBottom: 10,
+    fontSize: '3em',
+    fontWeight: '800',
+
+    marginBottom: 15,
   },
 
   aboutText: {
     fontSize: '1.2em',
-    marginBottom: 10,
+    marginBottom: 15,
+
+    textAlign: 'center',
+    lineHeight: '180%',
+
+    maxWidth: 650,
   },
 
   readMore: {
-    fontSize: '1.1em',
+    fontSize: '1em',
     margin: 0,
+    color: colors.blue,
   },
 
 }

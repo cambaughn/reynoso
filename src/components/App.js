@@ -14,8 +14,8 @@ import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
 import Contact from './Contact/Contact';
 import Reels from './Reels/Reels';
+import About from './About/About';
 import Home from './Home';
-import About from './About';
 
 
 class App extends Component {
