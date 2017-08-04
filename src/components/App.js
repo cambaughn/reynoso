@@ -8,7 +8,7 @@ import {
   Route,
   Link,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
@@ -17,25 +17,29 @@ import Reels from './Reels/Reels';
 import About from './About/About';
 import Home from './Home';
 
+import ScrollToTop from './Router/ScrollToTop';
+
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div style={styles.container}>
-          <NavBar />
+        <ScrollToTop>
+          <div style={styles.container}>
+            <NavBar />
 
-          <Switch>
-            <Route exact path={'/'} component={Home} />
-            <Route path={'/about'} component={About} />
-            {/* <Route path={'/resume'} component={Resume} /> */}
-            <Route path={'/reels'} component={Reels} />
-            <Route path={'/contact'} component={Contact} />
-          </Switch>
+            <Switch>
+              <Route exact path={'/'} component={Home} />
+              <Route path={'/about'} component={About} />
+              {/* <Route path={'/resume'} component={Resume} /> */}
+              <Route path={'/reels'} component={Reels} />
+              <Route path={'/contact'} component={Contact} />
+            </Switch>
 
-          <Footer />
+            <Footer />
 
-        </div>
+          </div>
+        </ScrollToTop>
       </Router>
     );
   }
