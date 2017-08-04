@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
-import ShowCards from '../About/ShowCards';
+import ShowCards from '../SocialLinks/ShowCards';
 
 const Reels = () => {
   return (

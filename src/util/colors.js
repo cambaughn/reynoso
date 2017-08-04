@@ -8,6 +8,8 @@ const colors = {
   warmGrey: '#F4F4F4',
   blue: '#3498db',
   red: '#e74c3c',
+  green: '#2ecc71',
+  purple: '#9b59b6',
 }
 
 export default colors;

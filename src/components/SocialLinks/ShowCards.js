@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import ShowCardItem from './ShowCardItem';
 
 const ShowCards = ({ headerText }) => {
   return (
@@ -13,13 +14,19 @@ const ShowCards = ({ headerText }) => {
       <h2 style={styles.headerText}>{headerText}</h2>
 
       <div style={styles.images}>
-        <a href='http://www.imdb.com/title/tt6517102/' target='_blank' rel='noopener noreferrer' style={styles.imageWrapper}>
-          <img src='https://mentalmultiverse.files.wordpress.com/2017/07/mv5bzjdkm2q0nzcty2rizs00zjcylwizntetmdbimjm0ymiwmtm1xkeyxkfqcgdeqxvynzq2mjy3mjm-_v1_.jpg' alt={'Castlevania'} style={styles.image} />
-        </a>
 
-        <a href='http://www.imdb.com/title/tt6517102/' target='_blank' rel='noopener noreferrer' style={styles.imageWrapper}>
-          <img src='http://img07.deviantart.net/a7dd/i/2012/327/9/f/winx_club_nick_believix_by_winxclub157372-d5lwl2j.jpg' alt={'Winx Club'} style={styles.image} />
-        </a>
+        <ShowCardItem
+          to={'http://www.imdb.com/title/tt6517102/'}
+          imageSource={'https://mentalmultiverse.files.wordpress.com/2017/07/mv5bzjdkm2q0nzcty2rizs00zjcylwizntetmdbimjm0ymiwmtm1xkeyxkfqcgdeqxvynzq2mjy3mjm-_v1_.jpg'}
+          alt={'Castlevania'}
+        />
+
+        <ShowCardItem
+          to={'http://www.imdb.com/title/tt0421482/'}
+          imageSource={'http://img07.deviantart.net/a7dd/i/2012/327/9/f/winx_club_nick_believix_by_winxclub157372-d5lwl2j.jpg'}
+          alt={'Winx Club'}
+        />
+
       </div>
 
     </div>
@@ -49,14 +56,15 @@ const styles = {
     fontSize: '1.8em',
   },
 
-  // IMAGE CARD ---------------------
+  // IMAGES ------------------------
 
   images: {
-    width: 600,
+    width: 700,
+    height: 160,
 
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
 

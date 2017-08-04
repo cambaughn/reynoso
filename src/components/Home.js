@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavLink from './NavBar/NavLink';
-import ShowCards from './About/ShowCards';
+import ShowCards from './SocialLinks/ShowCards';
 import colors from '../util/colors';
 
 const Home = () => {
