@@ -13,7 +13,8 @@ const NavBar = () => {
     <div style={styles.container}>
       <div>
         <Link to={'/'} style={styles.brand}>
-          <img src={require('../../assets/photos/reynoso-wordmark.png')} alt={'Ale'} style={styles.brandImage}/>
+          {/* <img src={require('../../assets/photos/reynoso-wordmark.png')} alt={'Ale'} style={styles.brandImage}/> */}
+          <h1>AR</h1>
         </Link>
       </div>
 
@@ -52,11 +53,11 @@ const styles = {
   brand: {
     color: 'black',
     textDecoration: 'none',
+    fontWeight: 'bold',
   },
 
   brandImage: {
     height: 35,
-
   },
 
   // RIGHT-SIDE LINKS --------------------------

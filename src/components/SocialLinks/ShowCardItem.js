@@ -28,8 +28,6 @@ class ShowCardItem extends Component {
           target='_blank'
           rel='noopener noreferrer'
           style={this.state.hover ? {...styles.container, ...styles.hover} : styles.container}
-          onMouseEnter={this.toggleHover}
-          onMouseLeave={this.toggleHover}
         >
           <img src={this.props.imageSource} alt={this.props.alt} style={styles.image} />
         </a>
