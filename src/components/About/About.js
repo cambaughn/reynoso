@@ -1,15 +1,21 @@
 /*eslint no-use-before-define: "off"*/
 /*eslint no-unused-vars: "off"*/
+/*eslint no-empty-pattern: "off"*/
 /*eslint-env es6*/
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import ShowCards from '../SocialLinks/ShowCards';
 import InlineLink from '../SocialLinks/InlineLink';
+
 import colors from '../../util/colors';
 
-const About = () => {
+const About = ({}, context) => {
+
+  let styles = context.desktopWidth ? desktopStyles() : mobileStyles();
+
   return (
     <div style={styles.container}>
       <div style={styles.topSection}>
@@ -54,56 +60,119 @@ const About = () => {
   )
 }
 
-
-const styles = {
-  // CONTAINER ---------------------
-
-  container: {
-    marginTop: 40,
-
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-
-  // TOP SECTION --------------------
-
-  topSection: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-  },
-
-  // IMAGE ---------------------------
+About.contextTypes = {
+  desktopWidth: PropTypes.bool
+};
 
 
-  photoWrapper: {
-    width: 400,
-    height: 400,
-    backgroundColor: colors.warmGrey,
+const mobileStyles = () => {
+  return {
+    // CONTAINER ---------------------
 
-  },
+    container: {
+      marginTop: 40,
 
-  // BIO ----------------------------
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+    },
 
-  bio: {
-    width: 600,
-    marginLeft: 80,
-  },
+    // TOP SECTION --------------------
 
-  header: {
-    marginTop: 0,
-  },
+    topSection: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+    },
 
-  text: {
-    marginTop: 0,
-    marginBottom: '1.5em',
-    lineHeight: '180%',
-  },
+    // IMAGE ---------------------------
 
 
+    photoWrapper: {
+      width: window.innerWidth - 20,
+      height: window.innerWidth - 20,
+
+      maxWidth: 400,
+      maxHeight: 400,
+
+      backgroundColor: colors.warmGrey,
+
+    },
+
+    // BIO ----------------------------
+
+    bio: {
+      width: window.innerWidth - 20,
+      marginTop: 40,
+    },
+
+    header: {
+      marginTop: 0,
+    },
+
+    text: {
+      marginTop: 0,
+      marginBottom: '1.5em',
+      lineHeight: '180%',
+    },
+
+  }
 }
+
+
+const desktopStyles = () => {
+  return {
+    // CONTAINER ---------------------
+
+    container: {
+      marginTop: 40,
+
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+    },
+
+    // TOP SECTION --------------------
+
+    topSection: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+    },
+
+    // IMAGE ---------------------------
+
+
+    photoWrapper: {
+      width: 400,
+      height: 400,
+      backgroundColor: colors.warmGrey,
+
+    },
+
+    // BIO ----------------------------
+
+    bio: {
+      width: 600,
+      marginLeft: 80,
+    },
+
+    header: {
+      marginTop: 0,
+    },
+
+    text: {
+      marginTop: 0,
+      marginBottom: '1.5em',
+      lineHeight: '180%',
+    },
+
+  }
+}
+
 
 export default About;

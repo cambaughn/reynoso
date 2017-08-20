@@ -17,6 +17,8 @@ import Reels from './Reels/Reels';
 import About from './About/About';
 import Home from './Home';
 
+import Responsive from './Responsive/Responsive';
+
 import ScrollToTop from './Router/ScrollToTop';
 
 
@@ -25,20 +27,24 @@ class App extends Component {
     return (
       <Router>
         <ScrollToTop>
-          <div style={styles.container}>
-            <NavBar />
+          <Responsive>
 
-            <Switch>
-              <Route exact path={'/'} component={Home} />
-              <Route path={'/about'} component={About} />
-              {/* <Route path={'/resume'} component={Resume} /> */}
-              <Route path={'/reels'} component={Reels} />
-              <Route path={'/contact'} component={Contact} />
-            </Switch>
+            <div style={styles.container}>
+              <NavBar />
 
-            <Footer />
+              <Switch>
+                <Route exact path={'/'} component={Home} />
+                <Route path={'/about'} component={About} />
+                {/* <Route path={'/resume'} component={Resume} /> */}
+                <Route path={'/reels'} component={Reels} />
+                <Route path={'/contact'} component={Contact} />
+              </Switch>
 
-          </div>
+              <Footer />
+
+            </div>
+
+          </Responsive>
         </ScrollToTop>
       </Router>
     );
