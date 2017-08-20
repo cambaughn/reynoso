@@ -90,19 +90,6 @@ const desktopStyles = () => {
 
 const mobileStyles = () => {
   return {
-    // CONTAINER ---------------------
-
-    container: {
-      marginTop: 40,
-
-      width: '100%',
-
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-
-    },
 
     // TEXT --------------------------
 
