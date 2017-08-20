@@ -4,10 +4,14 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import ShowCardItem from './ShowCardItem';
 
 const ShowCards = ({ headerText }) => {
+
+  let styles = window.innerWidth > 700 ? desktopStyles() : {...desktopStyles(), ...mobileStyles()};
+
   return (
     <div style={styles.container}>
 
@@ -34,52 +38,93 @@ const ShowCards = ({ headerText }) => {
 }
 
 
-const styles = {
-  // CONTAINER ---------------------
+const desktopStyles = () => {
+  return {
+    // CONTAINER ---------------------
 
-  container: {
-    marginTop: 40,
+    container: {
+      marginTop: 40,
 
-    width: '100%',
+      width: '100%',
 
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
 
-  },
+    },
 
-  // TEXT --------------------------
+    // TEXT --------------------------
 
-  headerText: {
-    marginBottom: 40,
-    fontSize: '1.8em',
-  },
+    headerText: {
+      marginBottom: 40,
+      fontSize: '1.8em',
+    },
 
-  // IMAGES ------------------------
+    // IMAGES ------------------------
 
-  images: {
-    width: 700,
-    height: 160,
+    images: {
+      width: 700,
+      height: 160,
 
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+    },
 
-  imageWrapper: {
-    width: 250,
-    height: 140,
+    imageWrapper: {
+      width: 250,
+      height: 140,
 
-    backgroundColor: 'grey',
+      backgroundColor: 'grey',
 
-    overflow: 'hidden',
-  },
+      overflow: 'hidden',
+    },
 
-  image: {
-    width: '100%',
-  },
+    image: {
+      width: '100%',
+    },
+  }
 }
+
+const mobileStyles = () => {
+  return {
+    // CONTAINER ---------------------
+
+    container: {
+      marginTop: 40,
+
+      width: '100%',
+
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+
+    },
+
+    // TEXT --------------------------
+
+    headerText: {
+      marginBottom: 40,
+      fontSize: '1.8em',
+    },
+
+    // IMAGES ------------------------
+
+    images: {
+      width: '100%',
+      height: 320,
+
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+
+  }
+}
+
 
 export default ShowCards;
