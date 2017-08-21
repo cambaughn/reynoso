@@ -6,56 +6,73 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavLink from './NavLink';
+import SideNav from './SideNav';
 import colors from '../../util/colors';
 
-const NavBar = () => {
+class NavBar extends Component {
+  constructor(props) {
+    super(props);
 
-  let desktopWidth = window.innerWidth > 700;
+    this.state = {
+      sideNavVisible: false,
+    }
 
-  let styles = desktopWidth ? desktopStyles() : {...desktopStyles(), ...mobileStyles()};
+    this.toggleSideNav = this.toggleSideNav.bind(this);
+  }
 
-  if (desktopWidth) {
-    return (
-      <div style={styles.container}>
-        <div>
-          <Link to={'/'} style={styles.brand}>
-            {/* <img src={require('../../assets/photos/reynoso-wordmark.png')} alt={'Ale'} style={styles.brandImage}/> */}
-            <h1>AR</h1>
-          </Link>
+  toggleSideNav() {
+    this.setState({ sideNavVisible: !this.state.sideNavVisible })
+  }
+
+  render() {
+
+    let desktopWidth = window.innerWidth > 700;
+
+    let styles = desktopWidth ? desktopStyles() : {...desktopStyles(), ...mobileStyles()};
+
+    if (desktopWidth) {
+      return (
+        <div style={styles.container}>
+          <div>
+            <Link to={'/'} style={styles.brand}>
+              {/* <img src={require('../../assets/photos/reynoso-wordmark.png')} alt={'Ale'} style={styles.brandImage}/> */}
+              <h1>AR</h1>
+            </Link>
+          </div>
+
+          <div style={styles.links}>
+
+            <NavLink to={'/'} text={'Home'} />
+            <NavLink to={'/about'} text={'About'} />
+            <NavLink to={'/reels'} text={'Reels'} />
+            <NavLink to={'/resume'} text={'Resume & Headshots'} />
+            <NavLink to={'/contact'} text={'Contact'} />
+
+          </div>
         </div>
+      )
+    } else {
+      return (
+        <div style={styles.container}>
+          <div>
+            <Link to={'/'} style={styles.brand}>
+              <h1>AR</h1>
+            </Link>
+          </div>
 
-        <div style={styles.links}>
+          <div>
+            <i
+              className="fa fa-bars"
+              aria-hidden="true"
+              style={styles.hamburger}
+              onMouseDown={this.toggleSideNav}
+            ></i>
+          </div>
 
-          <NavLink to={'/'} text={'Home'} />
-          <NavLink to={'/about'} text={'About'} />
-          <NavLink to={'/reels'} text={'Reels'} />
-          <NavLink to={'/resume'} text={'Resume & Headshots'} />
-          <NavLink to={'/contact'} text={'Contact'} />
-
+          <SideNav visible={this.state.sideNavVisible} />
         </div>
-      </div>
-    )
-  } else {
-    return (
-      <div style={styles.container}>
-        <div>
-          <Link to={'/'} style={styles.brand}>
-            {/* <img src={require('../../assets/photos/reynoso-wordmark.png')} alt={'Ale'} style={styles.brandImage}/> */}
-            <h1>AR</h1>
-          </Link>
-        </div>
-
-        {/* <div style={styles.links}>
-
-          <NavLink to={'/'} text={'Home'} />
-          <NavLink to={'/about'} text={'About'} />
-          <NavLink to={'/reels'} text={'Reels'} />
-          <NavLink to={'/resume'} text={'Resume & Headshots'} />
-          <NavLink to={'/contact'} text={'Contact'} />
-
-        </div> */}
-      </div>
-    )
+      )
+    }
   }
 }
 
@@ -113,14 +130,14 @@ const mobileStyles = () => {
       width: 'inherit',
       height: 80,
 
-      paddingLeft: 60,
-      paddingRight: 60,
+      paddingLeft: 30,
+      paddingRight: 30,
 
       backgroundColor: 'transparent',
 
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'center',
+      justifyContent: 'space-between',
       alignItems: 'center',
     },
 
@@ -136,7 +153,12 @@ const mobileStyles = () => {
       height: 35,
     },
 
-    // RIGHT-SIDE LINKS --------------------------
+
+    // LINKS --------------------------
+
+    hamburger: {
+      fontSize: 25,
+    },
 
     links: {
       display: 'flex',
