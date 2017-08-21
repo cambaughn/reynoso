@@ -17,7 +17,7 @@ const Template = () => {
 
 
 const styles = {
-  // CONTAINER ---------------------
+  // --------------------- CONTAINER
 
   container: {
 

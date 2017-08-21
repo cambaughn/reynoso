@@ -21,7 +21,7 @@ class NavBar extends Component {
   }
 
   toggleSideNav() {
-    this.setState({ sideNavVisible: !this.state.sideNavVisible })
+    this.setState({ sideNavVisible: !this.state.sideNavVisible });
   }
 
   render() {
@@ -69,7 +69,7 @@ class NavBar extends Component {
             ></i>
           </div>
 
-          <SideNav visible={this.state.sideNavVisible} />
+          <SideNav visible={this.state.sideNavVisible} toggleSideNav={this.toggleSideNav} />
         </div>
       )
     }

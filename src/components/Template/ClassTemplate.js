@@ -21,7 +21,7 @@ class Template extends Component {
 }
 
 const styles = {
-  // CONTAINER ---------------------
+  // --------------------- CONTAINER
 
   container: {
 

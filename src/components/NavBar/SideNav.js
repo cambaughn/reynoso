@@ -6,28 +6,43 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import colors from '../../util/colors';
 
-const SideNav = ({ visible }) => {
-  console.log(visible)
+const SideNav = ({ visible, toggleSideNav }) => {
+  let styles = mobileStyles();
+
   return (
-    <div style={visible ? {...styles.container, ...styles.visible} : styles.container}>
-      <div style={styles.links}>
+    <div
+      style={visible ? {...styles.container, ...styles.visible} : styles.container}
+    >
+      <div style={styles.exitArea} onMouseDown={toggleSideNav}></div>
+      <div style={styles.tray}>
+        <i
+          className="fa fa-times"
+          aria-hidden="true"
+          style={styles.exit}
+          onMouseDown={toggleSideNav}
+        ></i>
 
-        <Link to={'/'} style={styles.link}>
-          <p>Home</p>
-        </Link>
-        <Link to={'/about'} style={styles.link}>
-          <p>About</p>
-        </Link>
-        <Link to={'/reels'} style={styles.link}>
-          <p>Reels</p>
-        </Link>
-        <Link to={'/resume'} style={styles.link}>
-          <p>Resume & Headshots</p>
-        </Link>
-        <Link to={'/contact'} style={styles.link}>
-          <p>Contact</p>
-        </Link>
+        <div style={styles.links}>
+
+          <Link to={'/'} style={styles.link}>
+            <p>Home</p>
+          </Link>
+          <Link to={'/about'} style={styles.link}>
+            <p>About</p>
+          </Link>
+          <Link to={'/reels'} style={styles.link}>
+            <p>Reels</p>
+          </Link>
+          <Link to={'/resume'} style={styles.link}>
+            <p>Resume & Headshots</p>
+          </Link>
+          <Link to={'/contact'} style={styles.link}>
+            <p>Contact</p>
+          </Link>
+
+        </div>
 
       </div>
     </div>
@@ -35,40 +50,84 @@ const SideNav = ({ visible }) => {
 }
 
 
-const styles = {
-  // CONTAINER ---------------------
+const mobileStyles = () => {
+  return {
+    // --------------------- CONTAINER
 
-  container: {
-    position: 'absolute',
-    top: 0,
-    left: window.innerWidth,
+    container: {
+      position: 'fixed',
+      top: 0,
+      left: window.innerWidth,
 
-    width: 200,
-    height: window.innerHeight,
+      width: window.innerWidth,
+      height: window.innerHeight,
 
-    backgroundColor: 'white',
+      backgroundColor: 'transparent',
 
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+      alignItems: 'center',
 
-    transition: 'left 0.5s',
-  },
+      zIndex: 0,
 
-  visible: {
-    left: window.innerWidth - 200,
-  },
+      transition: 'left 0.5s',
+    },
 
-  // CONTAINER ---------------------
-  links: {
+    visible: {
+      left: 0,
+    },
 
-  },
+    // --------------------- TRAY
 
-  link: {
-    textDecoration: 'none',
-    color: 'black',
-  },
+    tray: {
+      width: 250,
+      height: window.innerHeight,
+
+      backgroundColor: 'white',
+
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+
+      zIndex: 1,
+    },
+
+    // --------------------- EXIT
+
+    exitArea: {
+      backgroundColor: 'transparent',
+      height: window.innerHeight,
+      width: window.innerWidth - 250,
+    },
+
+    exit: {
+      position: 'absolute',
+      top: 30,
+      right: 30,
+
+      // color: colors.blue,
+      fontSize: 25,
+    },
+
+    // --------------------- LINKS
+    links: {
+      height: window.innerHeight - (window.innerHeight * 0.3),
+
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+    },
+
+    link: {
+      textDecoration: 'none',
+      color: 'black',
+
+      fontSize: 18,
+    },
+  }
 }
 
 export default SideNav;
