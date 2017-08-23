@@ -39,7 +39,7 @@ const Contact = () => {
         </p>
       </div> {/* voiceOverWrapper */}
 
-      <SocialLinks headerText={'Social'} />
+      <SocialLinks headerText={'Social'} linkGroupStyle={{ width: 325 }} />
 
     </div>
   )
@@ -60,7 +60,7 @@ const styles = {
   // AGENTS --------------------------
 
   voiceOverWrapper: {
-    marginBottom: 20,
+    marginBottom: 30,
     textAlign: 'center',
   },
 

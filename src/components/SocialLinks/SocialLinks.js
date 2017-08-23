@@ -24,7 +24,7 @@ class SocialLinks extends Component {
             <i className="fa fa-facebook-official" aria-hidden="true"></i>
           </a>
           <a href='http://www.imdb.com/name/nm2274825/' target='_blank' rel='noopener noreferrer' style={{...styles.link, ...this.props.linkStyle}}>
-            <i className="fa fa-facebook-official" aria-hidden="true"></i>
+            <i className="fa fa-imdb" aria-hidden="true"></i>
           </a>
         </div>
 
@@ -48,7 +48,7 @@ const styles = {
   // HEADER ---------------------
 
   linkHeader: {
-    marginBottom: 10,
+    marginBottom: 20,
   },
 
   // LINKS -------------------------
