@@ -36,7 +36,7 @@ const styles = {
   // LINKS ---------------------
 
   linkGroupStyle: {
-    width: 250,
+    width: 300,
   },
 
   linkStyle: {

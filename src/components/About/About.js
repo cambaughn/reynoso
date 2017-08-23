@@ -14,7 +14,7 @@ import colors from '../../util/colors';
 
 const About = ({}, context) => {
 
-  let styles = context.desktopWidth ? desktopStyles() : mobileStyles();
+  let styles = window.innerWidth > 1000 ? desktopStyles() : mobileStyles();
 
   return (
     <div style={styles.container}>
