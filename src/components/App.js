@@ -15,7 +15,8 @@ import Footer from './Footer/Footer';
 import Contact from './Contact/Contact';
 import Reels from './Reels/Reels';
 import About from './About/About';
-import Home from './Home';
+import Home from './Home/Home';
+import News from './News/News';
 
 import Responsive from './Responsive/Responsive';
 
@@ -37,6 +38,7 @@ class App extends Component {
                 <Route path={'/about'} component={About} />
                 {/* <Route path={'/resume'} component={Resume} /> */}
                 <Route path={'/reels'} component={Reels} />
+                <Route path={'/news'} component={News} />
                 <Route path={'/contact'} component={Contact} />
               </Switch>
 

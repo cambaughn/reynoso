@@ -5,14 +5,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import NavLink from './NavBar/NavLink';
-import ShowCards from './SocialLinks/ShowCards';
-import colors from '../util/colors';
+import NavLink from '../NavBar/NavLink';
+import ShowCards from '../SocialLinks/ShowCards';
+import colors from '../../util/colors';
 
 const Home = () => {
   return (
     <div style={styles.container}>
-      <img src={require('../assets/photos/hero.jpg')} alt={'Alejandra portrait'} style={styles.hero}/>
+      <img src={require('../../assets/photos/hero.jpg')} alt={'Alejandra portrait'} style={styles.hero}/>
 
       <div style={styles.aboutWrapper}>
         <h1 style={styles.aboutHeader}>Welcome</h1>

@@ -46,6 +46,7 @@ class NavBar extends Component {
             <NavLink to={'/about'} text={'About'} />
             <NavLink to={'/reels'} text={'Reels'} />
             <NavLink to={'/resume'} text={'Resume & Headshots'} />
+            <NavLink to={'/news'} text={'News'} />
             <NavLink to={'/contact'} text={'Contact'} />
 
           </div>

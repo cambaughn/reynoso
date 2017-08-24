@@ -38,6 +38,9 @@ const SideNav = ({ visible, toggleSideNav }) => {
           <Link to={'/resume'} style={styles.link}>
             <p>Resume & Headshots</p>
           </Link>
+          <Link to={'/news'} style={styles.link}>
+            <p>News</p>
+          </Link>
           <Link to={'/contact'} style={styles.link}>
             <p>Contact</p>
           </Link>
