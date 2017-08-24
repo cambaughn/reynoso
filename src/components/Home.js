@@ -19,6 +19,8 @@ const Home = () => {
         <p style={styles.aboutText}>
           Alejandra is super awesome. Here are a few great things about her.
 
+          Checking
+
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed dictum odio. Donec arcu risus, hendrerit accumsan sem id, facilisis vehicula velit. Maecenas non arcu tincidunt, euismod ex quis, congue augue. Aliquam erat volutpat. Quisque ut turpis felis. Duis et rutrum nisl, eget scelerisque tellus.
         </p>
 
