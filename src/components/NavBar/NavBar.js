@@ -66,7 +66,7 @@ class NavBar extends Component {
               className="fa fa-bars"
               aria-hidden="true"
               style={styles.hamburger}
-              onMouseDown={this.toggleSideNav}
+              onClick={this.toggleSideNav}
             ></i>
           </div>
 

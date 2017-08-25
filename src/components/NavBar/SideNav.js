@@ -15,13 +15,13 @@ const SideNav = ({ visible, toggleSideNav }) => {
     <div
       style={visible ? {...styles.container, ...styles.visible} : styles.container}
     >
-      <div style={styles.exitArea} onMouseDown={toggleSideNav}></div>
+      <div style={styles.exitArea} onClick={toggleSideNav}></div>
       <div style={styles.tray}>
         <i
           className="fa fa-times"
           aria-hidden="true"
           style={styles.exit}
-          onMouseDown={toggleSideNav}
+          onClick={toggleSideNav}
         ></i>
 
         <div style={styles.links}>
