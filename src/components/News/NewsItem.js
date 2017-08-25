@@ -10,13 +10,14 @@ import NewsTag from './NewsTag';
 import NewsLink from './NewsLink';
 import colors from '../../util/colors';
 
-const NewsItem = ({ tag, headline, text, date }) => {
+const NewsItem = ({ tag, color, headline, link, text, date }) => {
   return (
     <div style={styles.container}>
-      <NewsTag tag={tag} backgroundColor={colors.red} />
+      <NewsTag tag={tag} backgroundColor={color} />
       <NewsLink
-        headline={'Netflix Orders Second Season of \'Castlevania\''}
-        color={colors.red} to={'https://www.tvinsider.com/311968/netflix-orders-second-season-of-castlevania/'}
+        headline={headline}
+        color={color}
+        to={link}
       />
       <div style={styles.dateWrapper}>
         <i className="fa fa-clock-o" aria-hidden="true" style={styles.clock}></i>
@@ -35,6 +36,7 @@ const styles = {
 
   container: {
     width: '100%',
+    marginBottom: 50,
   },
 
   // --------------------- TEXT

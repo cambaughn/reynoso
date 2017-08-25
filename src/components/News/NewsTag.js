@@ -6,12 +6,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import colors from '../../util/colors';
-
 const NewsTag = ({ tag, backgroundColor }) => {
   return (
     <div style={styles.container}>
-      <div style={{...styles.tagWrapper, backgroundColor}}>
+      <div style={{ ...styles.tagWrapper, backgroundColor }}>
         <h5 style={styles.text}>{tag}</h5>
       </div>
     </div>
