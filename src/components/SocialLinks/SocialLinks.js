@@ -11,7 +11,9 @@ class SocialLinks extends Component {
     return (
       <div style={{...styles.container, ...this.props.linkGroupStyle}}>
 
-        <h2 style={styles.linkHeader}>{this.props.headerText}</h2>
+        { this.props.headerText &&
+          <h2 style={styles.linkHeader}>{this.props.headerText}</h2>
+        }
 
         <div style={styles.linkWrapper}>
           <a href='https://www.instagram.com/alereyn0s0/' target='_blank' rel='noopener noreferrer' style={{...styles.link, ...this.props.linkStyle}}>

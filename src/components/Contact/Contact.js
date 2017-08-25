@@ -60,6 +60,7 @@ const styles = {
   // AGENTS --------------------------
 
   voiceOverWrapper: {
+    marginTop: 30,
     marginBottom: 30,
     textAlign: 'center',
   },
