@@ -6,4 +6,4 @@
 
 ### Running the app
 
-1. `nodemon server/server.js` to start express server on port 1337
+1. `npm start` to start development server on port 3000
