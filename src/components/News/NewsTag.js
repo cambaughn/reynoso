@@ -35,7 +35,7 @@ const styles = {
     paddingLeft: 8,
     paddingRight: 8,
 
-    borderRadius: 15,
+    borderRadius: 20,
 
     display: 'flex',
     justifyContent: 'center',
