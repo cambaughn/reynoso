@@ -45,6 +45,8 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
+
+    minHeight: window.innerHeight - 80,
   },
 
   // --------------------- NEWS

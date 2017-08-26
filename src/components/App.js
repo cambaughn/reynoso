@@ -17,9 +17,9 @@ import Reels from './Reels/Reels';
 import About from './About/About';
 import Home from './Home/Home';
 import News from './News/News';
+import Resume from './Resume/Resume';
 
 import Responsive from './Responsive/Responsive';
-
 import ScrollToTop from './Router/ScrollToTop';
 
 
@@ -36,7 +36,7 @@ class App extends Component {
               <Switch>
                 <Route exact path={'/'} component={Home} />
                 <Route path={'/about'} component={About} />
-                {/* <Route path={'/resume'} component={Resume} /> */}
+                <Route path={'/resume'} component={Resume} />
                 <Route path={'/reels'} component={Reels} />
                 <Route path={'/news'} component={News} />
                 <Route path={'/contact'} component={Contact} />
